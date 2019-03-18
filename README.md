@@ -1,6 +1,6 @@
 # Wifi Positioning
 
-This program is a simple wifi positioning demo, which uses WKNN (Weighted K-Nearest-Neighbor) algorithm.
+This program is a simple wifi positioning demo, which uses WKNN (Weighted K-Nearest-Neighbor) algorithm. The repo also provides a wifi dataset in the data directory.
 
 # 1. Prerequisites
 This program has been tested on Ubuntu 16.04. It has several dependecies.
@@ -20,7 +20,11 @@ You can simply install Eigen with the following command:
 sudo apt-get install libeigen3-dev
 ```
 
+## 1.3 OpenCV (optional)
+OpenCV is used to visualize the wifi positioning results. This library is optional.
+
 # 2. Build
+
 Clone the repository and build:
 ```bash
 git clone https://github.com/gjgjh/WifiPositioning
@@ -33,23 +37,13 @@ make -j4
 
 # 3. Example
 
-Usage:
-wifiPositioning <pathtodataset> <pathtotestdata> k <knn/wknn/wknn2>
+We provide a read wifi dataset in the data directory. The data was collected on the fourth floor of the Science Academic Building of Peking University, and the collection equipment was an ASUS computer. The detailed file format is [here](https://github.com/gjgjh/WifiPositioning/blob/master/data/README.md). A simple usage example can be found in the test directory.
 
-`k` : the number of nearest neighbor used in searching
 
-`knn` : K-Nearest-Neighbor
-
-`wknn` : Weighted K-Nearest-Neighbor
-
-`wknn2` : Weighted K-Nearest-Neighbor version 2 (not recommended)
-
-For example:
-```bash
-cd ~/WifiPositioning
-bin/wifiPositioning data/wifi_basedata data/wifi_testdata/ 3 wknn
-```
+<img src="https://github.com/gjgjh/WifiPositioning/blob/master/support_files/figure1.png" width = 45% height = 45% div align=left/> <img src="https://github.com/gjgjh/WifiPositioning/blob/master/support_files/figure2.png" width = 45% height = 45% div align=center/>
 
 # 4. License
 
-This program is licensed under the MIT.
+The source code is released under [GPLv3](http://www.gnu.org/licenses/) license.
+
+We are still working on improving the code reliability. For any technical issues or commercial inquiries, please contact GJH <guojh_rs@pku.edu.cn>.

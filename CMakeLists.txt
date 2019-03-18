@@ -15,9 +15,6 @@ include_directories(${MLPACK_INCLUDE_DIRS})
 # for eigen
 include_directories("/usr/include/eigen3")
 
-# for filesystem
-link_libraries(stdc++fs)
-
 # for opencv (OPTIONAL)
 find_package(OpenCV)
 include_directories(${OpenCV_INCLUDE_DIRS})
